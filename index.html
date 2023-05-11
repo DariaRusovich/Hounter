@@ -3,12 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
- 
+    <header class="header">
+      <div class="container">
+        <nav class="nav d-flex">
+          <a class="logo d-flex" href="index.html" aria-label="Go to home page">
+            <img
+              class="logo-img"
+              width="1"
+              height="1"
+              loading="lazy"
+              src="./img/logo.svg"
+              alt="LOGO"
+            />
+            <span>Hounter</span>
+          </a>
+          <div class="nav-wrapper d-flex">
+            <ul class="nav-menu d-flex">
+              <li class="nav-about"><a href="#">About us</a></li>
+              <li class="nav-article"><a href="#">Article</a></li>
+              <li class="nav-property"><a href="#">Property</a></li>
+            </ul>
+            <button type="button" class="btn btn-primary nav_button">
+              Sign up!
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
