@@ -417,6 +417,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   font-family: 'Lexend', 'Open Sans', sans-serif;
+  height: 1000px; /* dev */
 }
 
 picture {
@@ -468,5 +469,85 @@ picture {
   align-items: center;
   justify-content: space-between;
 }
-
+.heading-font {
+  color: var(--heading-text-color);
+}
 /*===========COMMON STYLES END============*/
+
+/*===========HEDER STYLES START============*/
+.header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  padding: 20px 0;
+}
+.logo {
+  font-weight: 700;
+  font-size: 16px;
+}
+.logo span {
+  margin-left: 12px;
+  text-transform: capitalize;
+  color: var(--heading-text-color);
+}
+.nav-menu li:not(:first-child) {
+  margin-left: 25px;
+}
+
+.nav-menu li > a {
+  padding: 10px;
+}
+
+.nav-btn {
+  margin-left: 40px;
+}
+.nav-button {
+  background-color: var(--success-secondary-color);
+  color: var(--success-primary-color);
+}
+.nav-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+}
+
+/*===========HERO STYLES END============*/
+
+/*===========HERO STYLES START============*/
+
+.hero-offer-heading {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: capitalize;
+  width: 50%;
+  line-height: 1.5;
+}
+
+.hero-wrapper {
+  position: relative;
+}
+
+/* .hero-offer-heading span {
+  -webkit-text-stroke: 1.2px #000;
+    color: transparent;
+  border: 1px solid red;
+} */
+
+.picture {
+  width: 100%;
+}
+
+/* .hero {
+
+} */
+
+.hero-offer-img {
+  position: absolute;
+  top: 0;
+  left: 49.3%;
+  width: 50vw;
+  height: 834px;
+  object-fit: cover;
+  object-position: top;
+  transform: translateY(-15%);
+  border-radius: 0 0 0 80px;
+}
