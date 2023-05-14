@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
@@ -24,9 +25,16 @@
           </a>
           <div class="nav-wrapper d-flex">
             <ul class="nav-menu d-flex">
-              <li class="nav-about"><a href="#">About us</a></li>
-              <li class="nav-article"><a href="#">Article</a></li>
-              <li class="nav-property"><a href="#">Property</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Article</a></li>
+              <li class="nav-drop-menu">
+                <a href="#">Property <i class="icon-chevron-down"></i></a>
+                <ul class="drop-menu">
+                  <li><a href="#">House</a></li>
+                  <li><a href="#">Villa</a></li>
+                  <li><a href="#">Apartment</a></li>
+                </ul>
+              </li>
             </ul>
             <button type="button" class="btn btn-primary nav-button">
               Sign up!
