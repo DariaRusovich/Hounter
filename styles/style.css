@@ -398,7 +398,7 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --primary-color: hsl(228, 7%, 56%);
+  --primary-color: hsl(228, 7%, 48%);
   --secondary-color: hsl(160, 84%, 39%);
   --heading-text-color: hsl(239, 53%, 22%);
   --accent-color: hsl(38, 92%, 50%);
@@ -464,14 +464,49 @@ picture {
   color: var(--success-primary-color);
   transition: ease 0.5s;
 }
+.picture {
+  width: 100%;
+}
 .d-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .heading-font {
   color: var(--heading-text-color);
 }
+.text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+.form {
+  padding: 4px 4px 4px 24px;
+  width: 496px;
+  border-radius: 32px;
+  position: relative;
+}
+.form input {
+  width: 300px;
+  margin-left: 35px;
+}
+
+.form::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  transform: translate(100%, 65%);
+}
+.form input::placeholder {
+  color: var(--primary-color);
+}
+.form input:focus-within {
+  outline: 1px solid transparent;
+}
+
 /*===========COMMON STYLES END============*/
 
 /*===========HEDER STYLES START============*/
@@ -495,7 +530,12 @@ picture {
 }
 
 .nav-menu li > a {
-  padding: 10px;
+  font-weight: 600;
+  padding: 8px 16px;
+  background: hsl(149, 80%, 90%, 0.2);
+  border: 1px solid var(--success-primary-color);
+  color: var(--success-primary-color);
+  border-radius: 32px;
 }
 
 .nav-btn {
@@ -504,6 +544,7 @@ picture {
 .nav-button {
   background-color: var(--success-secondary-color);
   color: var(--success-primary-color);
+  margin-left: 40px;
 }
 .nav-button:hover {
   background-color: var(--secondary-color);
@@ -513,41 +554,58 @@ picture {
 /*===========HERO STYLES END============*/
 
 /*===========HERO STYLES START============*/
-
-.hero-offer-heading {
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: capitalize;
-  width: 50%;
-  line-height: 1.5;
+.hero {
+  padding: 100px 0;
 }
-
 .hero-wrapper {
   position: relative;
 }
-
+.hero-offer-wrapper {
+  width: 495px;
+}
+.hero-offer-heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: capitalize;
+  width: 100%;
+}
+.hero-offer-wrapper > .hero-offer-text {
+  width: 100%;
+  margin-top: 25px;
+}
+.hero-offer-text {
+  font-size: 16px;
+  line-height: 1.75;
+}
+.hero-search-form {
+  margin-top: 35px;
+  border: 1px solid hsl(224, 22%, 90%);
+}
+.hero-search-form::before {
+  content: url(../img/hero_location_icon.svg);
+}
+.hero-offer-set {
+  margin-top: 60px;
+}
+.hero-offer-set-wrapper img {
+  width: 80px;
+  height: auto;
+}
 /* .hero-offer-heading span {
   -webkit-text-stroke: 1.2px #000;
     color: transparent;
   border: 1px solid red;
 } */
 
-.picture {
-  width: 100%;
-}
-
-/* .hero {
-
-} */
-
 .hero-offer-img {
   position: absolute;
   top: 0;
   left: 49.3%;
+  transform: translateY(-25%);
   width: 50vw;
   height: 834px;
   object-fit: cover;
   object-position: top;
-  transform: translateY(-15%);
   border-radius: 0 0 0 80px;
 }
