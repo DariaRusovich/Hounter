@@ -454,10 +454,6 @@ body {
   font-family: 'Lexend', 'Open Sans', sans-serif;
   height: 1000px; /* dev */
 }
-
-picture {
-  display: inline-block;
-}
 button,
 input,
 textarea,
@@ -477,8 +473,9 @@ picture {
   padding: 12em 0;
 }
 .container {
-  max-width: 120rem;
-  width: 100%;
+  width: clamp(32rem, 100rem + 15vw, 120rem);
+  /* max-width: 120rem; */
+  /* width: 100%; */
   margin: 0 auto;
 }
 .logo-img {
@@ -537,6 +534,15 @@ picture {
 .form input:focus-within {
   outline: 1px solid transparent;
 }
+.blur::before {
+  content: '';
+  position: absolute;
+  width: clamp(30rem, 30rem + 15vw, 74rem);
+  height: clamp(30rem, 50rem, 54rem);
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: -100;
+}
 
 /*===========COMMON STYLES END============*/
 
@@ -544,10 +550,11 @@ picture {
 
 .header {
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   width: 100%;
   padding: 2em 0;
 }
+
 .logo {
   font-weight: 700;
   font-size: 1.6rem;
@@ -618,7 +625,18 @@ picture {
 /*===========HERO STYLES START============*/
 
 .hero {
-  padding: 7.15em 0;
+  padding: 7.1em 0;
+  position: relative;
+  z-index: 100;
+}
+.hero.blur::before {
+  background: linear-gradient(
+    90deg,
+    var(--info-secondary-color),
+    var(--success-secondary-color)
+  );
+  top: -40%;
+  left: -10%;
 }
 .hero-wrapper {
   position: relative;
@@ -633,6 +651,16 @@ picture {
   text-transform: capitalize;
   width: 100%;
 }
+.hero-offer-heading span {
+  font-family: 'Poppins';
+  -webkit-text-stroke: 1px var(--heading-text-color);
+  color: transparent;
+  font-size: 4.2rem;
+}
+.hero-offer-heading,
+.hero-offer-heading span {
+  font-size: clamp(2.15rem, 4vw + 2.25rem, 4rem);
+}
 .hero-offer-wrapper > .hero-offer-text {
   width: 100%;
   margin-top: 1.7em;
@@ -640,6 +668,7 @@ picture {
 .hero-offer-text {
   font-size: 1.6rem;
   line-height: 1.75;
+  font-size: clamp(1rem, 2vw + 1rem, 1.6rem);
 }
 .hero-search-form {
   margin-top: 2.5em;
@@ -655,20 +684,69 @@ picture {
   width: 8rem;
   height: auto;
 }
-.hero-offer-heading span {
-  font-family: 'Poppins';
-  -webkit-text-stroke: 1px var(--heading-text-color);
-  color: transparent;
-  font-size: 4.2rem;
-}
 .hero-offer-img {
   position: absolute;
   top: -45%;
   left: 49.3%;
   width: 50vw;
-  min-height: 73.5rem;
+  min-height: 70rem;
   object-fit: cover;
   object-position: top;
   border-radius: 0 0 0 var(--border-radius);
   filter: brightness(0.75);
+}
+/* .hero-offer-img-wrapper {
+  position: relative;
+} */
+.hero-offer-ad-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(10%, 30%);
+  z-index: 1000;
+}
+
+.hero-offer-ad-card {
+  padding: 0.8rem 2.2rem 0.8rem 0.8rem;
+  width: 40rem;
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+}
+.hero-offer-ad-card picture {
+  max-height: 13.6rem;
+}
+.hero-offer-ad-card img {
+  width: 13.6rem;
+  height: 13.6rem;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+.hero-offer-ad-card p,
+.hero-offer-ad-card span {
+  margin-top: 0.8rem;
+}
+.hero-offer-ad-card a {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--heading-text-color);
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+.hero-offer-ad-card a:hover {
+  border-bottom: 1px solid var(--heading-text-color);
+  transition: 0.3s;
+}
+.hero-offer-ad-card p {
+  width: 20rem;
+  font-size: 1.2rem;
+}
+.hero-offer-ad-card span {
+  font-size: 1.2rem;
+  color: var(--heading-text-color);
+  font-weight: 500;
+}
+.ad-card-text-wrapper img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5em;
 }

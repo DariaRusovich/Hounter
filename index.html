@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/icons.css">
+    <link rel="preload" href="./styles/style.css" as="style" />
+    <link rel="stylesheet" href="./styles/icons.css" />
+    <link rel="stylesheet" href="./styles/style.css" as="style" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
@@ -43,7 +44,7 @@
         </nav>
       </div>
     </header>
-    <section class="hero hero-section">
+    <section class="hero hero-section blur">
       <div class="container d-flex hero-wrapper">
         <div class="hero-offer-wrapper">
           <h1 class="hero-offer-heading heading-font">
@@ -98,15 +99,67 @@
             </div>
           </div>
         </div>
-        <picture class="picture">
-          <source srcset="img/bg-1.webp" type="img/webp" />
-          <source srcset="img/bg-1.jpg" type="img/jpeg" />
-          <img
-            class="content-img hero-offer-img"
-            src="./img/bg-1.jpg"
-            alt="House offer"
-          />
-        </picture>
+        <div class="hero-offer-img-wrapper">
+          <picture class="picture">
+            <source srcset="img/bg-1.webp" type="img/webp" />
+            <source srcset="img/bg-1.jpg" type="img/jpeg" />
+            <img
+              class="content-img hero-offer-img"
+              src="./img/bg-1.jpg"
+              alt="House offer"
+            />
+          </picture>
+          <div class="hero-offer-ad-wrapper d-flex">
+            <div class="hero-offer-ad-card d-flex">
+              <picture>
+                <source srcset="img/article_1.web" type="img/webp" />
+                <source srcset="img/article_jpg" type="img/jpeg" />
+                <img
+                  width="1"
+                  height="1"
+                  loading="lazy"
+                  src="./img/article_1.webp"
+                  alt=""
+                />
+              </picture>
+              <div class="ad-card-text-wrapper">
+                <a href="#">Manhattan Style</a>
+                <p>Lorem ipsum dolor sit amet, conser adipiscing elit</p>
+                <span><img width="15" height="15" src="./img/review_icon.svg" alt="review icon"> 4.8 (400+ Review)</span>
+              </div>
+            </div>
+            <!-- <div class="hero-offer-ad-card">
+              <picture>
+                <source srcset="img/article_1.web" type="img/webp" />
+                <source srcset="img/article_jpg" type="img/jpeg" />
+                <img
+                  width="1"
+                  height="1"
+                  loading="lazy"
+                  src="./img/article_2.webp"
+                  alt=""
+                /> </picture
+              ><a href="#">New House For Your Future</a>
+              <p>Lorem ipsum dolor sit amet, conser adipiscing elit</p>
+              <span> <i></i>4.9 (350+ Review)</span>
+            </div> -->
+            <!-- <div class="hero-offer-ad-card">
+              <picture>
+                <source srcset="img/article_1.web" type="img/webp" />
+                <source srcset="img/article_jpg" type="img/jpeg" />
+                <img
+                  width="1"
+                  height="1"
+                  loading="lazy"
+                  src="./img/article_3.webp"
+                  alt=""
+                /> </picture
+              ><a href="#">Roselands House</a>
+              <p>Lorem ipsum dolor sit amet, conser adipiscing elit</p>
+              <span><i></i>4.9 (350+ Review)</span>
+            </div> -->
+          </div>
+        </div>
       </div>
     </section>
     <script type="module" src="/main.js"></script>
