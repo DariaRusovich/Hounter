@@ -515,18 +515,16 @@ picture {
   border-radius: var(--border-radius);
   position: relative;
 }
+.form-wrapper {
+  display: flex;
+  align-items: center;
+}
+.form-wrapper i{
+ font-size: 2.2rem;
+}
 .form input {
   width: 30rem;
-  margin-left: 2.5em;
-}
-.form::before {
-  content: '';
-  position: absolute;
-  width: 2.4rem;
-  height: 2.4rem;
-  top: 0;
-  left: 0;
-  transform: translate(100%, 65%);
+  margin-left: 1em;
 }
 .form input::placeholder {
   color: var(--primary-color);
@@ -554,7 +552,6 @@ picture {
   width: 100%;
   padding: 2em 0;
 }
-
 .logo {
   font-weight: 700;
   font-size: 1.6rem;
@@ -674,8 +671,8 @@ picture {
   margin-top: 2.5em;
   border: 1px solid hsl(224, 22%, 90%);
 }
-.hero-search-form::before {
-  content: url(../img/hero_location_icon.svg);
+.hero-search-form i{
+  color: var(--accent-color);
 }
 .hero-offer-set {
   margin-top: 4.2em;
@@ -695,9 +692,6 @@ picture {
   border-radius: 0 0 0 var(--border-radius);
   filter: brightness(0.75);
 }
-/* .hero-offer-img-wrapper {
-  position: relative;
-} */
 .hero-offer-ad-wrapper {
   position: absolute;
   top: 50%;
@@ -705,7 +699,6 @@ picture {
   transform: translate(10%, 30%);
   z-index: 1000;
 }
-
 .hero-offer-ad-card {
   padding: 0.8rem 2.2rem 0.8rem 0.8rem;
   width: 40rem;
@@ -740,13 +733,14 @@ picture {
   width: 20rem;
   font-size: 1.2rem;
 }
-.hero-offer-ad-card span {
+.hero-offer-ad-card span > a {
   font-size: 1.2rem;
   color: var(--heading-text-color);
   font-weight: 500;
 }
-.ad-card-text-wrapper img {
+.ad-card-text-wrapper i {
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.5em;
+  color: var(--accent-color);
 }
