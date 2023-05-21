@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('/fonts/icons-fonts/icons.eot');
+  src:  url('/fonts/icons-fonts/icons.eot') format('embedded-opentype'),
+    url('/fonts/icons-fonts/icons.ttf') format('truetype'),
+    url('/fonts/icons-fonts/icons.woff') format('woff'),
+    url('/fonts/icons-fonts/icons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-about_tab_icon_1:before {
+  content: "\e900";
+}
+.icon-about_tab_icon_2:before {
+  content: "\e901";
+}
+.icon-about_tab_icon_3:before {
+  content: "\e902";
+}
+.icon-article_time_icon:before {
+  content: "\e903";
+}
+.icon-chevron-down:before {
+  content: "\e904";
+}
+.icon-chevron-left:before {
+  content: "\e905";
+}
+.icon-chevron-right:before {
+  content: "\e906";
+}
+.icon-facebook:before {
+  content: "\e907";
+}
+.icon-hero_location_icon:before {
+  content: "\e908";
+}
+.icon-info_mail_icon:before {
+  content: "\e909";
+}
+.icon-instagram:before {
+  content: "\e90a";
+}
+.icon-menu_icon_4:before {
+  content: "\e90b";
+}
+.icon-offer_icon_1:before {
+  content: "\e90c";
+}
+.icon-offer_icon_2:before {
+  content: "\e90d";
+}
+.icon-offer_icon_3:before {
+  content: "\e90e";
+}
+.icon-review_icon:before {
+  content: "\e90f";
+}
+.icon-twitter:before {
+  content: "\e910";
+}
